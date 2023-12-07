@@ -38,7 +38,7 @@ elif(s=='IP camera'):
                 window.image(f,channels='BGR')
 
 elif(s=='File'):
-    u=st.number_input('enter the URL or file name')
+    u=st.text_input('enter the URL or file name')
     window=st.empty()
     btn=st.button('start')
     if btn:
