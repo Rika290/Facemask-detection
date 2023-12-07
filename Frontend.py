@@ -4,7 +4,7 @@ from keras.models import load_model
 import numpy as np
 st.set_page_config(page_title='Face Mask Detection',page_icon='https://5.imimg.com/data5/PI/FD/NK/SELLER-5866466/images-500x500.jpg')
 st.title('Welcome to FaceMask Detection 😷')
-s=st.sidebar.selectbox('Home',('Home','IP camera','Camera'))
+s=st.sidebar.selectbox('Home',('Home','IP camera','File'))
 st.sidebar.image('https://cdn.hackernoon.com/images/oO6rUouOWRYlzw88QM9pb0KyMIJ3-bxfy3m27.png')
 if(s=='Home'):
     st.image('https://miro.medium.com/v2/resize:fit:2000/0*gvwpXO8cpZOY5BeS')
@@ -37,8 +37,8 @@ elif(s=='IP camera'):
                         cv2.rectangle(f,(x,y),(l+x,w+y),(255,255,255),3)
                 window.image(f,channels='BGR')
 
-elif(s=='Camera'):
-    u=st.number_input('enter 0 for pri. and 1 for sec.camera')
+elif(s=='File'):
+    u=st.number_input('enter the URL or file name')
     window=st.empty()
     btn=st.button('start')
     if btn:
